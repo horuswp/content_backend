@@ -33,7 +33,7 @@ def override_get_current_user():
     return {"username": "ericktest", "id": 1, "user_role": "admin"}
 
 
-client = TestClient(app)
+tester_client = TestClient(app)
 
 
 @pytest.fixture

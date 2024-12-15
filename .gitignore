@@ -8,3 +8,14 @@
 __pycache__/
 .idea
 env
+
+# python environment
+**/*.pickle
+.env
+**/__pycache__/
+**/*.ipynb
+**/*.csv
+
+# PyCharm project configuration files
+.idea
+/dist/
