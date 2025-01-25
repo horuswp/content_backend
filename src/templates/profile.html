@@ -1,0 +1,42 @@
+{% include 'layout.html' %}
+
+<div class="container">
+    <div class="card text-center">
+        <div class="card-header">
+            Profiles List
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">List of profiles</h5>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Height</th>
+                        <th scope="col">Measurements</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for profile in profiles %}
+                <tr class="pointer">
+                    <td>{{loop.index}}</td>
+                    <td>{{profile.name}}</td>
+                    <td>{{profile.age}}</td>
+                    <td>{{profile.height}} cm</td>
+                    <td>{{profile.bust}}-{{profile.waist}}-{{profile.hips}}</td>
+                    <td>
+                        <button onclick="window.location.href='edit-profile-page/{{profile.id}}'"
+                                type="button" class="btn btn-info">
+                            Edit
+                        </button>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+            <a href="add-profile-page" class="btn btn-primary">Add a new profile!</a>
+        </div>
+    </div>
+</div> 
